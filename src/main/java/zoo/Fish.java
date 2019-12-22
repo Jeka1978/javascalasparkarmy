@@ -3,9 +3,9 @@ package zoo;
 /**
  * @author Evgeny Borisov
  */
-public class Horse implements Animal {
+public class Fish implements Animal {
     @Override
     public void makeVoice() {
-        System.out.println("Neeeeeaaea");
+        System.out.println("Blu blu");
     }
 }
