@@ -8,9 +8,11 @@ object Stam {
 
   def main(args: Array[String]): Unit = {
 
-
-    val point:Point = Point()
-    println(point)
+    val wolf = new Wolf(hp = 10)
+    val cow = Cow()
+    wolf.makeVoice()
+    cow.makeVoice()
+    println(AnimalDirector.amount)
   }
 
 }
