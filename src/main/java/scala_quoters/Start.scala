@@ -5,8 +5,9 @@ package scala_quoters
   */
 object Start {
   def main(args: Array[String]): Unit = {
-    val quoters = List(RandomQuoter, new ShakespeareQuoter(), MessageQuoter("I love scala, maybe"))
-    val aggregator = new QuoterAggregator(quoters)
-    aggregator.sayAllQuotes()
+    MessageQuoter("I love scala, maybe")
+    new ShakespeareQuoter()
+    RandomQuoter
+    QuoterAggregator.sayAllQuotes()
   }
 }

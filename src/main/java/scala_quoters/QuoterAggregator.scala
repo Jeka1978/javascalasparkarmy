@@ -3,9 +3,14 @@ package scala_quoters
 /**
   * @author Evgeny Borisov
   */
-class QuoterAggregator(quoters: List[Quoter]) {
+object QuoterAggregator {
+  private var quoters: List[Quoter] = Nil
 
-  def sayAllQuotes():Unit={
+  def registerNewQuoter(quoter: Quoter): Unit = {
+    quoters = quoter :: quoters
+  }
+
+  def sayAllQuotes(): Unit = {
     quoters.foreach(_.sayQuote())
   }
 }
